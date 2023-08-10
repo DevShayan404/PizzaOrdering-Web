@@ -1,0 +1,505 @@
+<section
+style="background-image:
+linear-gradient(
+    rgba(0, 0, 0, 0.1), 
+  rgba(0, 0, 0, 0.1)
+),
+ url('../../../assets/Images/deal_bgImg.jpg');
+background-repeat: no-repeat;
+background-size: cover;"
+>
+  <div class="container">
+    <div class="row pt-2">
+        <div class="col-12 ">
+            <div class="orders-header">
+            <h1>SIGNATURE<br>LOVERS!</h1>
+        </div>
+        </div>
+    </div>
+    <div class="row gy-3 gx-3 pt-5 pb-5">
+
+      <div class="col-6 col-md-4">
+        <div class="card">
+          <div class="card-header">
+            <img src="assets\Images\openingSpecial1.jpg" alt="" />
+          </div>
+          <div class="card-body">
+            <div class="deal-header">
+              <div class="pizza-name">
+                <h5>SOPRANO</h5>
+                <P>170-240 cals/slice</P>
+                <div class="add-pizza-quantity">
+                  <button type="" (click)="minus()">
+                    <fa-icon class="cart" [icon]="faMinusCircle"></fa-icon>
+                  </button>
+                  <input type="text" [value]="quantity" />
+                  <button type="" (click)="plus()">
+                    <fa-icon class="cart" [icon]="faPlusCircle"></fa-icon>
+                  </button>
+                </div>
+              </div>
+              <!-- <div class="add-pizza-quantity">
+                <button type="" (click)="minus()">
+                  <fa-icon class="cart" [icon]="faMinusCircle"></fa-icon>
+                </button>
+                <input type="text" [value]="quantity" />
+                <button type="" (click)="plus()">
+                  <fa-icon class="cart" [icon]="faPlusCircle"></fa-icon>
+                </button>
+              </div> -->
+            </div>
+
+            <div class="deal-body">
+              <div class="deal-pizza-spec">
+                <p>
+                  Sopressata, Sun Dried Tomatos, Gorgonzola Cheese, Mozzarella
+                  Cheese and Pizzaiola Tomato Suace.
+                </p>
+              </div>
+              <div class="deal-pizza-sizes">
+                <ul>
+                  <li>
+                    <div class="deal-pizza-sizes-left">
+                      <input
+                        type="radio"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1"> Regular</label>
+                    </div>
+                    <div class="deal-pizza-sizes-right">
+                      <p>$18.54</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="deal-pizza-sizes-left">
+                      <input
+                        type="radio"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1"> Large</label>
+                    </div>
+                    <div class="deal-pizza-sizes-right">
+                      <p>$18.54</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="deal-pizza-sizes-left">
+                      <input
+                        type="radio"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1"> Small</label>
+                    </div>
+                    <div class="deal-pizza-sizes-right">
+                      <p>$18.54</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="deal-pizza-sizes-left">
+                      <input
+                        type="radio"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1"> Xlarge</label>
+                    </div>
+                    <div class="deal-pizza-sizes-right">
+                      <p>$18.54</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button
+              class="pizza-deal-cutomizeBtn"
+              routerLink="CutomizePizzaComponent"
+            >
+              CUSTOMIZE
+            </button>
+            <button
+              class="pizza-deal-orderBtn"
+              routerLink="CompleteYourMealComponent"
+            >
+              ADD TO ORDER
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4">
+        <div class="card">
+          <div class="card-header">
+            <img src="assets\Images\openingSpecial1.jpg" alt="" />
+          </div>
+          <div class="card-body">
+            <div class="deal-header">
+              <div class="pizza-name">
+                <h5>SOPRANO</h5>
+                <P>170-240 cals/slice</P>
+                <div class="add-pizza-quantity">
+                  <button type="" (click)="minus()">
+                    <fa-icon class="cart" [icon]="faMinusCircle"></fa-icon>
+                  </button>
+                  <input type="text" [value]="quantity" />
+                  <button type="" (click)="plus()">
+                    <fa-icon class="cart" [icon]="faPlusCircle"></fa-icon>
+                  </button>
+                </div>
+              </div>
+              <!-- <div class="add-pizza-quantity">
+                <button type="" (click)="minus()">
+                  <fa-icon class="cart" [icon]="faMinusCircle"></fa-icon>
+                </button>
+                <input type="text" [value]="quantity" />
+                <button type="" (click)="plus()">
+                  <fa-icon class="cart" [icon]="faPlusCircle"></fa-icon>
+                </button>
+              </div> -->
+            </div>
+
+            <div class="deal-body">
+              <div class="deal-pizza-spec">
+                <p>
+                  Sopressata, Sun Dried Tomatos, Gorgonzola Cheese, Mozzarella
+                  Cheese and Pizzaiola Tomato Suace.
+                </p>
+              </div>
+              <div class="deal-pizza-sizes">
+                <ul>
+                  <li>
+                    <div class="deal-pizza-sizes-left">
+                      <input
+                        type="radio"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1"> Regular</label>
+                    </div>
+                    <div class="deal-pizza-sizes-right">
+                      <p>$18.54</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="deal-pizza-sizes-left">
+                      <input
+                        type="radio"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1"> Large</label>
+                    </div>
+                    <div class="deal-pizza-sizes-right">
+                      <p>$18.54</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="deal-pizza-sizes-left">
+                      <input
+                        type="radio"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1"> Small</label>
+                    </div>
+                    <div class="deal-pizza-sizes-right">
+                      <p>$18.54</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="deal-pizza-sizes-left">
+                      <input
+                        type="radio"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1"> Xlarge</label>
+                    </div>
+                    <div class="deal-pizza-sizes-right">
+                      <p>$18.54</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button
+              class="pizza-deal-cutomizeBtn"
+              routerLink="CutomizePizzaComponent"
+            >
+              CUSTOMIZE
+            </button>
+            <button
+              class="pizza-deal-orderBtn"
+              routerLink="CompleteYourMealComponent"
+            >
+              ADD TO ORDER
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4">
+        <div class="card">
+          <div class="card-header">
+            <img src="assets\Images\openingSpecial1.jpg" alt="" />
+          </div>
+          <div class="card-body">
+            <div class="deal-header">
+              <div class="pizza-name">
+                <h5>SOPRANO</h5>
+                <P>170-240 cals/slice</P>
+                <div class="add-pizza-quantity">
+                  <button type="" (click)="minus()">
+                    <fa-icon class="cart" [icon]="faMinusCircle"></fa-icon>
+                  </button>
+                  <input type="text" [value]="quantity" />
+                  <button type="" (click)="plus()">
+                    <fa-icon class="cart" [icon]="faPlusCircle"></fa-icon>
+                  </button>
+                </div>
+              </div>
+              <!-- <div class="add-pizza-quantity">
+                <button type="" (click)="minus()">
+                  <fa-icon class="cart" [icon]="faMinusCircle"></fa-icon>
+                </button>
+                <input type="text" [value]="quantity" />
+                <button type="" (click)="plus()">
+                  <fa-icon class="cart" [icon]="faPlusCircle"></fa-icon>
+                </button>
+              </div> -->
+            </div>
+
+            <div class="deal-body">
+              <div class="deal-pizza-spec">
+                <p>
+                  Sopressata, Sun Dried Tomatos, Gorgonzola Cheese, Mozzarella
+                  Cheese and Pizzaiola Tomato Suace.
+                </p>
+              </div>
+              <div class="deal-pizza-sizes">
+                <ul>
+                  <li>
+                    <div class="deal-pizza-sizes-left">
+                      <input
+                        type="radio"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1"> Regular</label>
+                    </div>
+                    <div class="deal-pizza-sizes-right">
+                      <p>$18.54</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="deal-pizza-sizes-left">
+                      <input
+                        type="radio"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1"> Large</label>
+                    </div>
+                    <div class="deal-pizza-sizes-right">
+                      <p>$18.54</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="deal-pizza-sizes-left">
+                      <input
+                        type="radio"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1"> Small</label>
+                    </div>
+                    <div class="deal-pizza-sizes-right">
+                      <p>$18.54</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="deal-pizza-sizes-left">
+                      <input
+                        type="radio"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1"> Xlarge</label>
+                    </div>
+                    <div class="deal-pizza-sizes-right">
+                      <p>$18.54</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button
+              class="pizza-deal-cutomizeBtn"
+              routerLink="CutomizePizzaComponent"
+            >
+              CUSTOMIZE
+            </button>
+            <button
+              class="pizza-deal-orderBtn"
+              routerLink="CompleteYourMealComponent"
+            >
+              ADD TO ORDER
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4">
+        <div class="card">
+          <div class="card-header">
+            <img src="assets\Images\openingSpecial1.jpg" alt="" />
+          </div>
+          <div class="card-body">
+            <div class="deal-header">
+              <div class="pizza-name">
+                <h5>SOPRANO</h5>
+                <P>170-240 cals/slice</P>
+                <div class="add-pizza-quantity">
+                  <button type="" (click)="minus()">
+                    <fa-icon class="cart" [icon]="faMinusCircle"></fa-icon>
+                  </button>
+                  <input type="text" [value]="quantity" />
+                  <button type="" (click)="plus()">
+                    <fa-icon class="cart" [icon]="faPlusCircle"></fa-icon>
+                  </button>
+                </div>
+              </div>
+              <!-- <div class="add-pizza-quantity">
+                <button type="" (click)="minus()">
+                  <fa-icon class="cart" [icon]="faMinusCircle"></fa-icon>
+                </button>
+                <input type="text" [value]="quantity" />
+                <button type="" (click)="plus()">
+                  <fa-icon class="cart" [icon]="faPlusCircle"></fa-icon>
+                </button>
+              </div> -->
+            </div>
+
+            <div class="deal-body">
+              <div class="deal-pizza-spec">
+                <p>
+                  Sopressata, Sun Dried Tomatos, Gorgonzola Cheese, Mozzarella
+                  Cheese and Pizzaiola Tomato Suace.
+                </p>
+              </div>
+              <div class="deal-pizza-sizes">
+                <ul>
+                  <li>
+                    <div class="deal-pizza-sizes-left">
+                      <input
+                        type="radio"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1"> Regular</label>
+                    </div>
+                    <div class="deal-pizza-sizes-right">
+                      <p>$18.54</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="deal-pizza-sizes-left">
+                      <input
+                        type="radio"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1"> Large</label>
+                    </div>
+                    <div class="deal-pizza-sizes-right">
+                      <p>$18.54</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="deal-pizza-sizes-left">
+                      <input
+                        type="radio"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1"> Small</label>
+                    </div>
+                    <div class="deal-pizza-sizes-right">
+                      <p>$18.54</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="deal-pizza-sizes-left">
+                      <input
+                        type="radio"
+                        id="vehicle1"
+                        name="vehicle1"
+                        value="Bike"
+                      />
+                      <label for="vehicle1"> Xlarge</label>
+                    </div>
+                    <div class="deal-pizza-sizes-right">
+                      <p>$18.54</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button
+              class="pizza-deal-cutomizeBtn"
+              routerLink="CutomizePizzaComponent"
+            >
+              CUSTOMIZE
+            </button>
+            <button
+              class="pizza-deal-orderBtn"
+              routerLink="CompleteYourMealComponent"
+            >
+              ADD TO ORDER
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+

@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+    scroll-behavior: smooth;
+}
+/* body{
+  overflow: hidden;
+} */
+
+@font-face {
+  font-family: "lance";
+  src:local("lance") ,url(./assets/fonts/LanceSansRg.otf);
+}
+:root{
+    --brown:#831820;
+    --green:rgb(46, 157, 83);
+    --yellow:#F8C950;
+    --orange:#e4584b;
+    --lightgray: #c5c5c5;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  

@@ -1,0 +1,342 @@
+<div class="cutomize-pizza-main">
+    <!-- /////////////////////////////////Pizza cutomize section///////////////////////////////////////// -->
+    <div class="customize-left-div">
+       <!-- /////////////////////////////////image///////////////////////////////////////// -->
+       <div class="pizza-img">
+           <img src="assets\Images\openingSpecial2.jpg" alt="">
+       </div>
+
+<!-- /////////////////////////////////select items main///////////////////////////////////////// -->
+       <div class="select-item-main">
+           <!-- /////////////////////////////////size & crust///////////////////////////////////////// -->
+               <div class="container twoPizza-items-header" >
+
+                    <div class="row p-3 twoPizza-items-card">
+                        <div class="col-3 ">
+                            <div class="twoPizza_card-img">
+                            <img src="assets\Images\twoPizzaDeal.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="twoPizza-card-spec">
+                                <h5>FIRST <br> MEDIUM PIZA</h5>
+                                <p>Mozzarella cheese and Pizzaiolo tomato sauce.</p>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="twoPizza-card-button">
+                                <button 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#exampleModal"
+                                >Customize</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p-3 twoPizza-items-card">
+                        <div class="col-3 ">
+                            <div class="twoPizza_card-img">
+                            <img src="assets\Images\twoPizzaDeal.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="twoPizza-card-spec">
+                                <h5>FIRST <br> MEDIUM PIZA</h5>
+                                <p>Mozzarella cheese and Pizzaiolo tomato sauce.</p>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="twoPizza-card-button">
+                                <button>Customize</button>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+
+
+
+       </div>
+    </div>
+
+
+
+    <!-- /////////////////////////////////Pizza name & add cutomization///////////////////////////////////////// -->
+    <div class="customize-right-div">
+       <div class="selectd-pizza-name">
+           <h1>SOPRANO</h1>
+           <p>Sopressata, Sun Dried Tomatoes, Gorgonzola Cheese, Mozzarella Cheese and Pizzaiolo Tomato Sauce</p>
+       </div>
+<div class="scrollToFixed"
+[ngClass]="{ scrollToFixedActive: OrderSummaryFixed == true }"
+>
+               <div class="order-summary">
+                   <div class="order-summary-header">
+                       <p>ORDER SUMMARY</p>
+                       <span>$22.36</span>
+                   </div>
+                   <div class="order-summary-body">
+                   <h5>SOPRANO</h5>
+                   <ul>
+                       <li>Size: <span>Large</span></li>
+                       <li>Crust Style: <span>Original</span></li>
+                       <li>
+                           Left Side
+                           <ul  class="inner-orderSummary-ul">
+                               <li>
+                                   <span>- </span>
+                                   <span>: </span>
+                               </li>
+                           </ul>
+                       </li>
+                       <li>
+                           Whole Pizza
+                           <ul class="inner-orderSummary-ul">
+                               <li>
+                                   <span>- </span>
+                                   <span>: </span>
+                               </li>
+                           </ul>
+                       </li>
+                       <li>
+                           Right Side
+                           <ul class="inner-orderSummary-ul">
+                               <li>
+                                   <span>- </span>
+                                   <span>: </span>
+                               </li>
+                           </ul>
+                       </li>
+                   </ul>
+
+
+                   <div class="order-summary-button">
+                       <button class="pizza-deal-orderBtn">Add To Cart</button>
+                   </div>
+               </div>
+               <!-- <div class="order-summary-footer">
+
+                   <div class="order-summary-button">
+                       <button class="pizza-deal-cutomizeBtn">Cancel</button>
+                       <button class="pizza-deal-orderBtn">Add To Cart</button>
+                   </div>
+               </div> -->
+           </div>
+</div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">FIRST MEDIUM PIZA</h5>
+          <button style="color: white; " type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+            <div class="modal-main">
+                <!-- -----------------------left section---------------------------------------- -->
+                  <div class="modal-main-left" >
+                    <div class="main-wrapper">
+                    <!-- /////////////////////////////////size & crust///////////////////////////////////////// -->
+                    <div class="container select-items-header">
+                      <div class="row size-header">
+                        <h1>1. SELECT SIZE & CRUST</h1>
+                      </div>
+            
+                      <div class="row size-select">
+                        <h5>Size</h5>
+                        <ul>
+                          <li>
+                            <label for="">Gluten Free Small (6 slice) $17.86</label>
+                            <input type="radio" />
+                          </li>
+                          <li>
+                            <label for="">Cauliflower Medium (8 slices) $21.74</label>
+                            <input type="radio" />
+                          </li>
+                          <li>
+                            <label for="">Large (10 slices)$22.36</label>
+                            <input type="radio" />
+                          </li>
+                        </ul>
+                      </div>
+            
+                      <div class="row size-select">
+                        <h5>Crust Style</h5>
+                        <ul>
+                          <li>
+                            <label for="">Original</label>
+                            <input type="radio" />
+                          </li>
+                          <li>
+                            <label for="">Thin Crust</label>
+                            <input type="radio" />
+                          </li>
+                          <li>
+                            <label for="">Deep Dish (Extra Thick Crust)</label>
+                            <input type="radio" />
+                          </li>
+                        </ul>
+                        <span class="crust-select">Deep Dish option add: $2.99</span>
+                      </div>
+                    </div>
+            
+                    <!-- /////////////////////////////////sauce & cheese///////////////////////////////////////// -->
+                    <div class="container select-items-header">
+                      <div class="row size-header">
+                        <h1>2. SELLECT SAUCE & CHEESES</h1>
+                        <!-- /////////////////////////////////sauce//////////////////////////////////////// -->
+                        <div class="col-6">
+                          <div class="sauce-select-main">
+                            <h5>Sauce</h5>
+            
+                            <ul>
+                              <li>
+                                <div
+                                  class="customize-spec"
+                                  data-bs-toggle="collapse"
+                                  data-bs-target="#collapseExample"
+                                  aria-expanded="false"
+                                  aria-controls="collapseExample"
+                                >
+                                  <label for="hello">hello</label>
+                                  <input id=" " type="checkbox" />
+                                </div>
+            
+                                <div class="customize-slice">
+                                  <div class="customize-slice-img">
+                                    <img src="assets\Images\pizzaLeft.png" alt="" />
+                                    <img src="assets\Images\pizzaWhole.ico" alt="" />
+                                    <img src="assets\Images\pizzaRight.png" alt="" />
+                                  </div>
+            
+                                  <div class="customize-slice-button">
+                                    <button class="customizeSliceButton">Regular</button>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+            
+                        <!-- /////////////////////////////////cheese///////////////////////////////////////// -->
+                        <div class="col-6">
+                          <div class="sauce-select-main">
+                            <h5>Cheeese</h5>
+            
+                            <ul>
+                              <li>
+                                <div class="customize-spec">
+                                  <label for="hello">hheell</label>
+                                  <input
+                                    id=" "
+                                    type="checkbox"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseExample"
+                                    aria-expanded="false"
+                                    aria-controls="collapseExample"
+                                  />
+                                </div>
+                                <div class="customize-slice">
+                                  <div class="customize-slice-img">
+                                    <img src="assets\Images\pizzaLeft.png" alt="" />
+                                    <img src="assets\Images\pizzaWhole.ico" alt="" />
+                                    <img src="assets\Images\pizzaRight.png" alt="" />
+                                  </div>
+            
+                                  <div class="customize-slice-button">
+                                    <button class="customizeSliceButton">Regular</button>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            
+                    </div>
+            
+                  </div>
+            <!-- -----------------------right section---------------------------------------- -->
+                  <div class="modal-main-right" >
+                    
+                        <div class="modal-scrollToFixed"
+            >
+                           <div class="modal-order-summary">
+            
+                                <div class="modal-order-summary-img">
+                                    <img src="assets\Images\pexels-narda-yescas-1566837.jpg" alt="">
+                                </div>
+            
+                               <div class="modal-order-summary-header">
+                                   <p>ORDER SUMMARY</p>
+                                   <span>$22.36</span>
+                               </div>
+            
+                               <div class="modal-order-summary-body">
+                               <h5>SOPRANO</h5>
+                               <ul>
+                                   <li>Size: <span>Large</span></li>
+                                   <li>Crust Style: <span>Original</span></li>
+                                   <li>
+                                       Left Side
+                                       <ul  class="inner-orderSummary-ul">
+                                           <li>
+                                               <span>- </span>
+                                               <span>: </span>
+                                           </li>
+                                       </ul>
+                                   </li>
+                                   <li>
+                                       Whole Pizza
+                                       <ul class="inner-orderSummary-ul">
+                                           <li>
+                                               <span>- </span>
+                                               <span>: </span>
+                                           </li>
+                                       </ul>
+                                   </li>
+                                   <li>
+                                       Right Side
+                                       <ul class="inner-orderSummary-ul">
+                                           <li>
+                                               <span>- </span>
+                                               <span>: </span>
+                                           </li>
+                                       </ul>
+                                   </li>
+                               </ul>
+            
+                                <div class="modal-order-summary-button">
+                                    <button data-bs-dismiss="modal" aria-label="Close" class="pizza-deal-orderBtn">close</button>
+                                </div>
+                                </div>
+                       </div>
+                        </div>
+            
+                </div>
+            
+            </div>
+        </div>
+
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+
+      </div>
+    </div>
+  </div>
+

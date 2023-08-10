@@ -1,0 +1,202 @@
+
+.modal-main{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.474);
+    position: fixed;
+    bottom: 0;
+    z-index: 1050;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 40%;
+}
+.nav-link {
+    color: #495057;
+    font-family: "lance";
+    font-size: .9rem;
+    padding: 5px;
+}
+.nav-tabs{
+    background: #f1f1f1;
+    padding: 5px 0px 0px 5px;
+}
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: var(--brown);
+    
+}
+.pickering{
+    margin: 0px 5px;
+}
+.pick-img{
+    border: 2px solid var(--brown);
+    border-radius: .3rem;
+    display: flex;
+    padding: 8px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+    transition: .3s linear;
+    cursor: pointer;
+
+}
+.pick-img:hover{
+    background-color: var(--yellow);
+}
+.pick-img{
+    width: 150px;
+    height: 150px;
+}
+.pickering button{
+    margin-top: 20px;
+    padding: 3px 10px;
+    border-radius: 1rem;
+    border: 2px solid var(--brown);
+    color: #fff;
+    background-color: var(--brown);
+    font-size: .9rem;
+    font-weight: 600;
+    transition: .3s ease-in-out;
+}
+.pickering button:hover{
+    background-color: var(--yellow);
+    color: var(--brown);
+}
+.select-loc-main{
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ /* border: 1px solid red; */
+}
+.select-loc{
+}
+.select-loc p{
+    padding: 0;
+    margin: 0 0 5px 0;
+    font-size: .7rem;
+    font-weight: 700;
+}
+.select-loc input{
+    width: 100%;
+    border-radius: .3rem;
+    border: none;
+    background: #ededed;
+    padding: 3px 8px;
+    font-size: .9rem;
+    outline: none;
+}
+.current-loc{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 5px;
+    cursor: pointer;
+}
+.current-loc fa-icon{
+    color: var(--brown);
+}
+.current-loc p{
+    transition: .3s linear;
+}
+.current-loc p:hover{
+    color: var(--brown);
+    text-decoration: underline;
+}
+.select-loc-main p{
+    margin-top: 10px;
+    font-size: .9rem;
+}
+.select-loc-main button{
+    width: max-content;
+    margin-top: 15px;
+    padding: 3px 10px;
+    border-radius: 1rem;
+    border: 2px solid var(--brown);
+    color: #fff;
+    background-color: var(--brown);
+    font-size: .9rem;
+    font-weight: 600;
+    transition: .3s ease-in-out;
+}
+.select-loc-main button:hover{
+    background-color: var(--yellow);
+    color: var(--brown);
+}
+
+/* <!-- //////////////////////loader/////////////////////////// --> */
+.loader{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* <!-- //////////////////////shopping cart/////////////////////////// --> */
+
+.shopping-cart{
+    margin: 15px;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+
+}
+.cart-img{
+    /* border: 1px solid var(--brown); */
+    width: max-content;
+    padding: 10px 15px;
+    /* background-color: var(--yellow); */
+    border-radius: .3rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .9);
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.cart-img fa-icon{
+    font-size: 1.2rem;
+    /* color: var(--brown); */
+}
+.cart-img span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    /* border: 1px solid red; */
+    padding: 5px 12px;
+    border-radius: 5rem;
+    font-size: .8rem;
+    font-weight: 700;
+    background-color: var(--orange);
+    color: #fff;
+}
+@media (min-width: 767px) {
+    .shopping-cart{
+        margin: 30px;
+    
+    }
+    .cart-img fa-icon{
+        font-size: 1.5rem;
+    }
+    .cart-img span{
+        font-size: .9rem;
+    }
+}
+@media (min-width: 1025px) {
+    .shopping-cart{
+        margin: 30px;
+    
+    }
+    .cart-img fa-icon{
+        font-size: 1.5rem;
+    }
+    .cart-img span{
+        font-size: .9rem;
+    }
+}

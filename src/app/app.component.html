@@ -1,0 +1,90 @@
+<!-- //////////////////////loader/////////////////////////// -->
+<div 
+*ngIf="loader"
+class="container-fluid"
+ style="background-image:
+linear-gradient(
+    rgba(0, 0, 0, 0.3), 
+  rgba(0, 0, 0, 0.3)
+),
+ url('../assets/Images/preloaderBG.png');
+background-repeat: no-repeat;
+background-size: cover;">
+    <div class="row">
+        <div class="col-12">
+            <div class="loader">
+                <img  src="assets\Images\326.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<app-navbar *ngIf="!loader"></app-navbar>
+<router-outlet *ngIf="!loader" (activate)="onActivate()"></router-outlet> 
+<app-footer *ngIf="!loader"></app-footer>
+
+<!-- <app-navbar></app-navbar>
+<router-outlet (activate)="onActivate()"></router-outlet> 
+<app-footer></app-footer> -->
+
+
+  
+
+
+<!-- *ngIf="Modal && !loader" -->
+<div *ngIf="Modal && !loader" class="modal-main">
+<div class="card p-4">
+ <ul class="nav nav-tabs " id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><fa-icon class="mx-1" [icon]="faTruck"></fa-icon>DELIVERY</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"><fa-icon class="mx-1" [icon]="faShop"></fa-icon>LOCAL PICKUP</button>
+  </li>
+</ul>
+<div class="tab-content mt-3" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+   <div class="select-loc-main">
+    <div class="select-loc">
+      <p>ADDRESS</p>
+      <input type="text" placeholder="Enter a delivery address">
+      <div class="current-loc">
+        <fa-icon [icon]="faLocationArrow"></fa-icon>
+        <p>OR DETECT MY CURRENT LOCATION</p>
+      </div>
+    </div>
+    <p class="collapse" id="collapseExample">Please type your address and select suggestion or click on "Use current location...".</p>
+    <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">START ORDER</button>
+   </div>
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <div class="pickering">
+      <div class="pick-img">
+        <img src="assets\Images\logo.png" alt="">
+      </div>
+      <button (click)=" modal()">START ORDER</button>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+
+
+
+
+<!-- //////////////////////shopping cart/////////////////////////// -->
+<section>
+    <div class="shopping-cart" >
+        <div class="cart-img" routerLink="AddToCartComponent">
+            <fa-icon [icon]="faCartPlus"></fa-icon>
+            <span>0</span>
+        </div>
+    </div>
+</section>
+
+

@@ -1,0 +1,47 @@
+<section class="navbar">
+    <header
+      (scroll)="onscroll()"
+      [ngClass]="{ activeHeader: navbarFixed == true }"
+    >
+    <div (click)="onActivate()" class="logo">
+      <img
+      (click)="redirect()"
+      [ngClass]="navbarFixed == true ? 'logoImgActive' : 'logoimg'"
+        src="assets\Images\logo.png"
+        alt=""
+      />
+    </div>
+      <!-- <div class="logo">
+        <img class="header-logo"
+          src="assets\Images\logo.png"
+          alt=""
+        />
+      </div> -->
+      <div class="toggle">
+        <ul>
+          <li class="order-online" routerLink="OrderOnlineComponent">ORDER ONLINE</li>
+          <li routerLink="LoginPageComponent" class="login">Login</li>
+          <!-- <li>
+            <fa-icon class="cart" [icon]="faCartShopping"></fa-icon>
+          </li> -->
+          <li>
+            <fa-icon class="hamburger" [icon]="faBars" (click)="toggleSidebar()"></fa-icon>
+          </li>
+        </ul>
+      </div>
+    </header>
+  </section>
+
+  <div class="sidebar-main" (click)="toggleSidebar()" *ngIf="showSidebar">
+  <div id="sidebar" >
+
+      <img src="assets\Images\footerLogo.png" alt="">
+      <fa-icon (click)="toggleSidebar()"  [icon]="faXmarkSquare"></fa-icon>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</div>

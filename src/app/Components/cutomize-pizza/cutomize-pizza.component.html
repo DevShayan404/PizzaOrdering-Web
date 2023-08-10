@@ -1,0 +1,821 @@
+
+<div class="cutomize-pizza-main">
+         <!-- /////////////////////////////////Pizza cutomize section///////////////////////////////////////// -->
+         <div class="customize-left-div">
+            <!-- /////////////////////////////////image///////////////////////////////////////// -->
+            <div class="pizza-img">
+                <img src="assets\Images\openingSpecial2.jpg" alt="">
+                <!-- for mobile screen -->
+                <div class="pizza-spec">
+                    <h1>SOPRANO</h1>
+                    <p>Sopressata, Sun Dried Tomatoes, Gorgonzola Cheese, Mozzarella Cheese and Pizzaiolo Tomato Sauce</p>
+                </div>
+            </div>
+
+<!-- /////////////////////////////////select items main///////////////////////////////////////// -->
+            <div class="select-item-main">
+                <!-- /////////////////////////////////size & crust///////////////////////////////////////// -->
+                    <div class="container select-items-header" >
+                        <div class="row size-header">
+                            <h1>1. SELECT SIZE & CRUST</h1>
+                        </div>
+
+                        <div class="row size-select">
+                            <h5>Size</h5>
+                            <ul>
+                                <li>
+                                    <label for="">Gluten Free Small (6 slice) $17.86</label>
+                                    <input type="radio">
+                                </li>
+                                <li>
+                                    <label for="">Cauliflower Medium (8 slices) $21.74</label>
+                                    <input type="radio">
+                                </li>
+                                <li>
+                                    <label for="">Large (10 slices)$22.36</label>
+                                    <input type="radio">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="row size-select">
+                            <h5>Crust Style</h5>
+                            <ul>
+                                <li>
+                                    <label for="">Original</label>
+                                    <input type="radio">
+                                </li>
+                                <li>
+                                    <label for="">Thin Crust</label>
+                                    <input type="radio">
+                                </li>
+                                <li>
+                                    <label for="">Deep Dish (Extra Thick Crust)</label>
+                                    <input type="radio">
+                                </li>
+                            </ul>
+                            <span class="crust-select">Deep Dish option add: $2.99</span>
+                        </div>
+                    </div>
+
+                    <!-- /////////////////////////////////sauce & cheese///////////////////////////////////////// -->
+                    <div class="container select-items-header">
+                        
+                    <div class="row size-header">
+                        <h1>2. SELLECT SAUCE & CHEESES</h1>
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <div class="sauce-select-main">
+                            <h5>Sauce</h5>
+
+                            <ul *ngFor=" let items of pizzaSauce, let i = index" >
+                                <li 
+                                [ngClass]="{ activeCustomizeDiv: this.selcetPizzaToppingCheese[i] }"
+                                > 
+                                    <div class="customize-spec"
+                                    
+                                    data-bs-toggle="collapse" 
+                                    data-bs-target="#collapseExample" 
+                                    aria-expanded="false" 
+                                    aria-controls="collapseExample"
+                                    >
+                                    <label for="hello">{{items.Description}}</label>
+                                    <input 
+                                    id=" "
+                                    type="checkbox" 
+                                    (click)="customizeCheckBoxCheese(items,i)"
+                                    >
+                                    </div>
+
+                                    <div *ngIf="this.selcetPizzaToppingCheese[i]  " class="customize-slice">
+                                        <!-- <div  class="customize-slice"> -->
+
+                                        <div class="customize-slice-img">
+                                            <img 
+                                            [ngClass]="{ customizeSliceImg: pizzaSide[i] == 'Left Side'}"
+                                            (click)="selectSizeLeft('Left Side',items,i)" 
+                                            src="assets\Images\pizzaLeft.png" alt=""
+                                            >
+                                            <img 
+                                            [ngClass]="{ customizeSliceImg: pizzaSide[i] == 'Whole Pizza'}"
+                                            (click)="selectSizeWhole('Whole Pizza',items,i)" 
+                                            src="assets\Images\pizzaWhole.ico" alt=""
+                                            >
+                                            <img
+                                            [ngClass]="{ customizeSliceImg: pizzaSide[i] == 'Right Side'}" 
+                                            (click)="selectSizeRight('Right Side',items,i)" 
+                                            src="assets\Images\pizzaRight.png" alt=""
+                                            >
+                                        </div>
+                                        
+                                        <div class="customize-slice-button">
+                                            <button
+                                            *ngFor="let data of pizzaSize"
+                                            class="customizeSliceButton"
+                                            [ngClass]="{customizeSliceButtonActive : this.regularCheese[i] == data.Size }"
+                                             (click)="customizeSliceButtonCheese(items.Description,data,i)"
+                                             >
+                                             {{data.Size}}
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- <li 
+                                [ngClass]="{ activeCustomizeDiv: this.selcetPizzaTopping ==  'sauce'}"
+                                > 
+                                    <div class="customize-spec"
+                                    (click)="customizeCheckBox('sauce')"
+                                    data-bs-toggle="collapse" 
+                                    data-bs-target="#collapseExample" 
+                                    aria-expanded="false" 
+                                    aria-controls="collapseExample"
+                                    >
+                                    <label for="hello">Truffle Oil</label>
+                                    <input 
+                                    id=" "
+                                    type="checkbox" 
+                                    >
+                                    </div>
+
+                                    <div *ngIf="this.selcetPizzaTopping ==  'sauce' " class="customize-slice">
+                                        <div class="customize-slice-img">
+                                            <img 
+                                            [ngClass]="{ customizeSliceImg: leftside == 'Left Side'}"
+                                            (click)="selectSize('Left Side')" 
+                                            src="assets\Images\pizzaLeft.png" alt=""
+                                            >
+                                            <img 
+                                            [ngClass]="{ customizeSliceImg: leftside == 'Whole Pizza'}"
+                                            (click)="selectSize('Whole Pizza')" 
+                                            src="assets\Images\pizzaWhole.ico" alt=""
+                                            >
+                                            <img
+                                            [ngClass]="{ customizeSliceImg: leftside == 'Right Side'}" 
+                                            (click)="selectSize('Right Side')" 
+                                            src="assets\Images\pizzaRight.png" alt=""
+                                            >
+                                        </div>
+                                        <div class="customize-slice-button">
+                                            <button
+                                            class="customizeSliceButton"
+                                            [ngClass]="{customizeSliceButtonActive : regular == 'Regular'}"
+                                             (click)="customizeSliceButton('Regular')"
+                                             >
+                                             Regular
+                                            </button>
+
+                                            <button
+                                            class="customizeSliceButton"
+                                            [ngClass]="{customizeSliceButtonActive : regular == 'Light'}"
+                                             (click)="customizeSliceButton('Light')"
+                                             >Light
+                                            </button>
+
+                                            <button 
+                                            class="customizeSliceButton"
+                                            [ngClass]="{customizeSliceButtonActive : regular == 'Extra'}"
+                                            (click)="customizeSliceButton('Extra')"
+                                            >Extra
+                                            </button>
+
+                                            <button 
+                                            class="customizeSliceButton"
+                                            [ngClass]="{customizeSliceButtonActive : regular == 'Double'}"
+                                            (click)="customizeSliceButton('Double')"
+                                            >Double
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </li> -->
+                            </ul>
+
+
+                           
+                           
+                        </div>
+                    </div>
+
+                        <!-- <div class="col-12 col-md-6  col-lg-6">
+                            <div class="sauce-select-main">
+                            <h5>Cheeese</h5>
+
+                            <ul *ngFor="let items of pizzaCheese, let i = index">
+                                <li 
+                                [ngClass]="{ activeCustomizeDiv: this.selcetPizzaToppingCheese[i] }"
+                                > 
+                                    <div class="customize-spec"
+                                    >
+                                    <label for="hello">{{items.Description}}</label>
+                                    <input 
+                                    id=" "
+                                    type="checkbox" 
+                                    (click)="customizeCheckBoxCheese(items,i)"
+                                    data-bs-toggle="collapse" 
+                                    data-bs-target="#collapseExample" 
+                                    aria-expanded="false" 
+                                    aria-controls="collapseExample"
+                                    >
+                                    </div>
+                                    <div *ngIf="this.selcetPizzaToppingCheese[i] " class="customize-slice ">
+                                        <div class="customize-slice-img">
+                                            <img 
+                                            [ngClass]="{ customizeSliceImg: pizzaSide[i] == 'Left Side'}"
+                                            (click)="selectSizeLeft('Left Side',items,i)" 
+                                            src="assets\Images\pizzaLeft.png" alt=""
+                                            >
+                                            <img 
+                                            [ngClass]="{ customizeSliceImg: pizzaSide[i] == 'Whole Pizza'}"
+                                            (click)="selectSizeWhole('Whole Pizza',items,i)" 
+                                            src="assets\Images\pizzaWhole.ico" alt=""
+                                            >
+                                            <img
+                                            [ngClass]="{ customizeSliceImg: pizzaSide[i] == 'Right Side'}" 
+                                            (click)="selectSizeRight('Right Side',items,i)" 
+                                            src="assets\Images\pizzaRight.png" alt=""
+                                            >
+                                        </div>
+
+                                        <div class="customize-slice-button">
+                                            <button
+                                            *ngFor="let data of pizzaSize"
+                                            class="customizeSliceButton"
+                                            [ngClass]="{customizeSliceButtonActive : this.regularCheese[i] == data.Size }"
+                                             (click)="customizeSliceButtonCheese(items.Description,data,i)"
+                                             >
+                                             {{data.Size}}
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+
+
+                           
+                           
+                        </div>
+                    </div> -->
+
+                    </div>
+                    </div>
+
+                    <!-- /////////////////////////////////TOPPING //////////////////////////////////////// -->
+                    <div class="container select-items-header">
+                        
+                        <div class="row size-header">
+                            <h1>3. SELLECT TOPPINGS</h1>
+                            <!-- /////////////////////////////////Meat//////////////////////////////////////// -->
+                            <!-- <div class="col-12">
+                                <div class="meat-select-main">
+                                <h5>Meat</h5>
+                                <ul>
+                                    <li 
+                                    [ngClass]="{ activeCustomizeDiv: customizeSectionActive === true }"
+                                    > 
+                                        <div class="customize-spec"
+                                        (click)="customizeCheckBox()"
+                                        >
+                                        <label for="hello">Pizzaiolo Tomato Sauce</label>
+                                        <input 
+                                        id=" "
+                                        type="checkbox" 
+                                        >
+                                        </div>
+    
+                                        <div *ngIf="this.customizeSectionActive == true" class="customize-slice">
+                                            <div class="customize-slice-img">
+                                                <img src="assets\Images\pizzaLeftSide.png" alt="">
+                                                <img src="assets\Images\pizzaWhole.png" alt="">
+                                                <img src="assets\Images\pizzaRightSide.png" alt="">
+                                            </div>
+                                            <div class="customize-slice-button">
+                                                <button>Regular</button>
+                                                <button>Light</button>
+                                                <button>Extra</button>
+                                                <button>Double</button>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li 
+                                    [ngClass]="{ activeCustomizeDiv: customizeSectionActive === true }"
+                                    > 
+                                        <div class="customize-spec"
+                                        (click)="customizeCheckBox()"
+                                        >
+                                        <label for="hello">Pizzaiolo Tomato Sauce</label>
+                                        <input 
+                                        id=" "
+                                        type="checkbox" 
+                                        >
+                                        </div>
+                                    </li>
+
+                                    <li 
+                                    [ngClass]="{ activeCustomizeDiv: customizeSectionActive === true }"
+                                    > 
+                                        <div class="customize-spec"
+                                        (click)="customizeCheckBox()"
+                                        >
+                                        <label for="hello">Pizzaiolo Tomato Sauce</label>
+                                        <input 
+                                        id=" "
+                                        type="checkbox" 
+                                        >
+                                        </div>
+                                    </li>
+                                </ul>
+                               
+                            </div>
+                        </div> -->
+    
+                            <!-- /////////////////////////////////Vegetables///////////////////////////////////////// -->
+                            <!-- <div class="col-12">
+                                <div class="meat-select-main">
+                                <h5>Vegetables</h5>
+                                <ul>
+                                    <li 
+                                    [ngClass]="{ activeCustomizeDiv: customizeSectionActive === true }"
+                                    > 
+                                        <div class="customize-spec"
+                                        (click)="customizeCheckBox()"
+                                        >
+                                        <label for="hello">Pizzaiolo Tomato Sauce</label>
+                                        <input 
+                                        id=" "
+                                        type="checkbox" 
+                                        >
+                                        </div>
+    
+                                        <div *ngIf="this.customizeSectionActive == true" class="customize-slice">
+                                            <div class="customize-slice-img">
+                                                <img src="assets\Images\pizzaLeftSide.png" alt="">
+                                                <img src="assets\Images\pizzaWhole.png" alt="">
+                                                <img src="assets\Images\pizzaRightSide.png" alt="">
+                                            </div>
+                                            <div class="customize-slice-button">
+                                                <button>Regular</button>
+                                                <button>Light</button>
+                                                <button>Extra</button>
+                                                <button>Double</button>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li 
+                                    [ngClass]="{ activeCustomizeDiv: customizeSectionActive === true }"
+                                    > 
+                                        <div class="customize-spec"
+                                        (click)="customizeCheckBox()"
+                                        >
+                                        <label for="hello">Pizzaiolo Tomato Sauce</label>
+                                        <input 
+                                        id=" "
+                                        type="checkbox" 
+                                        >
+                                        </div>
+                                    </li>
+
+                                    <li 
+                                    [ngClass]="{ activeCustomizeDiv: customizeSectionActive === true }"
+                                    > 
+                                        <div class="customize-spec"
+                                        (click)="customizeCheckBox()"
+                                        >
+                                        <label for="hello">Pizzaiolo Tomato Sauce</label>
+                                        <input 
+                                        id=" "
+                                        type="checkbox" 
+                                        >
+                                        </div>
+                                    </li>
+                                </ul>
+                               
+                            </div>
+                        </div> -->
+
+                            <!-- /////////////////////////////////Herb///////////////////////////////////////// -->
+                            <!-- <div class="col-12">
+                                <div class="meat-select-main">
+                                <h5>Herbs</h5>
+                                <ul>
+                                    <li 
+                                    [ngClass]="{ activeCustomizeDiv: customizeSectionActive === true }"
+                                    > 
+                                        <div class="customize-spec"
+                                        (click)="customizeCheckBox()"
+                                        >
+                                        <label for="hello">Pizzaiolo Tomato Sauce</label>
+                                        <input 
+                                        id=" "
+                                        type="checkbox" 
+                                        >
+                                        </div>
+    
+                                        <div *ngIf="this.customizeSectionActive == true" class="customize-slice">
+                                            <div class="customize-slice-img">
+                                                <img src="assets\Images\pizzaLeftSide.png" alt="">
+                                                <img src="assets\Images\pizzaWhole.png" alt="">
+                                                <img src="assets\Images\pizzaRightSide.png" alt="">
+                                            </div>
+                                            <div class="customize-slice-button">
+                                                <button>Regular</button>
+                                                <button>Light</button>
+                                                <button>Extra</button>
+                                                <button>Double</button>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li 
+                                    [ngClass]="{ activeCustomizeDiv: customizeSectionActive === true }"
+                                    > 
+                                        <div class="customize-spec"
+                                        (click)="customizeCheckBox()"
+                                        >
+                                        <label for="hello">Pizzaiolo Tomato Sauce</label>
+                                        <input 
+                                        id=" "
+                                        type="checkbox" 
+                                        >
+                                        </div>
+                                    </li>
+
+                                    <li 
+                                    [ngClass]="{ activeCustomizeDiv: customizeSectionActive === true }"
+                                    > 
+                                        <div class="customize-spec"
+                                        (click)="customizeCheckBox()"
+                                        >
+                                        <label for="hello">Pizzaiolo Tomato Sauce</label>
+                                        <input 
+                                        id=" "
+                                        type="checkbox" 
+                                        >
+                                        </div>
+                                    </li>
+                                </ul>
+                               
+                            </div>
+                        </div> -->
+
+                        <!-- /////////////////////////////////Plant Based///////////////////////////////////////// -->
+                        <!-- <div class="col-12">
+                            <div class="meat-select-main">
+                            <h5>Plant Based</h5>
+                            <ul>
+                                <li 
+                                [ngClass]="{ activeCustomizeDiv: customizeSectionActive === true }"
+                                > 
+                                    <div class="customize-spec"
+                                    (click)="customizeCheckBox()"
+                                    >
+                                    <label for="hello">Pizzaiolo Tomato Sauce</label>
+                                    <input 
+                                    id=" "
+                                    type="checkbox" 
+                                    >
+                                    </div>
+
+                                    <div *ngIf="this.customizeSectionActive == true" class="customize-slice">
+                                        <div class="customize-slice-img">
+                                            <img src="assets\Images\pizzaLeftSide.png" alt="">
+                                            <img src="assets\Images\pizzaWhole.png" alt="">
+                                            <img src="assets\Images\pizzaRightSide.png" alt="">
+                                        </div>
+                                        <div class="customize-slice-button">
+                                            <button>Regular</button>
+                                            <button>Light</button>
+                                            <button>Extra</button>
+                                            <button>Double</button>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li 
+                                [ngClass]="{ activeCustomizeDiv: customizeSectionActive === true }"
+                                > 
+                                    <div class="customize-spec"
+                                    (click)="customizeCheckBox()"
+                                    >
+                                    <label for="hello">Pizzaiolo Tomato Sauce</label>
+                                    <input 
+                                    id=" "
+                                    type="checkbox" 
+                                    >
+                                    </div>
+                                </li>
+
+                                <li 
+                                [ngClass]="{ activeCustomizeDiv: customizeSectionActive === true }"
+                                > 
+                                    <div class="customize-spec"
+                                    (click)="customizeCheckBox()"
+                                    >
+                                    <label for="hello">Pizzaiolo Tomato Sauce</label>
+                                    <input 
+                                    id=" "
+                                    type="checkbox" 
+                                    >
+                                    </div>
+                                </li>
+                            </ul>
+                           
+                        </div>
+                    </div> -->
+
+                        </div>
+                    </div>
+
+                    <!-- /////////////Order mobile screen///////////////////// -->
+                    <div class="container select-items-orderCart">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="select-items-ordercard">
+                                <div class="order-summary">
+                                <div class="order-summary-header">
+                                    <p>ORDER SUMMARY</p>
+                                    <span>$22.36</span>
+                                </div>
+                                <div class="order-summary-body">
+                                <h5>SOPRANO</h5>
+                                <ul>
+                                    <li>Size: <span>Large</span></li>
+                                    <li>Crust Style: <span>Original</span></li>
+                                    <!-- <li >
+                                        left side
+                                        <ul class="inner-orderSummary-ul">
+                                            <li *ngFor="let items of leftside;let i=index">
+                                                <span *ngIf="items != null || items != '' || items != undefined ">- {{selectedSuace[i]}}</span>
+                                                <span  *ngIf="items != null || items != '' || items != undefined ">: {{items}}</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li >
+                                        Whole Pizza
+                                        <ul class="inner-orderSummary-ul">
+                                            <li *ngFor="let items of WholePizza;let i=index">
+                                                <span *ngIf="items != null || items != '' || items != undefined ">- {{selectedSuace[i]}}</span>
+                                                <span *ngIf="items != null || items != '' || items != undefined ">: {{items}}</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li >
+                                        Right Side
+                                        <ul class="inner-orderSummary-ul">
+                                            <li *ngFor="let items of RightPizza;let i=index">
+                                                <span *ngIf="items != null || items != '' || items != undefined ">- {{selectedSuace[i]}}</span>
+                                                <span *ngIf="items != null || items != '' || items != undefined ">: {{items}}</span>
+                                            </li>
+                                        </ul>
+                                    </li> -->
+                                    <li>
+                                        Left Side
+                                        <ul  class="inner-orderSummary-ul">
+                                            <li *ngFor="let items of leftSideSelectedCheese">
+                                                <span>- {{items.description}}</span>
+                                                <span>: {{items.size}}</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Whole Pizza
+                                        <ul class="inner-orderSummary-ul">
+                                            <li *ngFor="let items of wholeSelectedCheese">
+                                                <span>- {{items.description}}</span>
+                                                <span>: {{items.size}}</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Right Side
+                                        <ul class="inner-orderSummary-ul">
+                                            <li *ngFor="let items of rightSideSelectedCheese">
+                                                <span>- {{items.description}}</span>
+                                                <span>: {{items.size}}</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- <li >
+                                        Right Side
+                                        <ul class="inner-orderSummary-ul">
+                                            <li *ngFor="let items of rightSideSelectedSuace">
+                                                <span>- {{items.description}}</span>
+                                                <span>: </span>
+                                            </li>
+                                        </ul>
+                                    </li> -->
+        
+                                    
+                                    <!-- <li *ngIf="this.cheeseSide == true">
+                                        {{this.leftsideCheese}}
+                                        <ul class="inner-orderSummary-ul">
+                                            <li *ngIf="this.leftsidepizza ==false">
+                                                <span>- {{this.suace}}</span>
+                                                <span>: {{this.regular}}</span>
+                                            </li>
+                                            <li *ngIf="this.leftsidepizzaCheese == false">
+                                                <span>- {{this.Cheese}}</span>
+                                                <span>: {{this.regularCheese}}</span>
+                                            </li>
+                                        </ul>
+                                    </li> -->
+        
+                                    <!-- <li *ngIf="this.leftsidepizza ==true">
+                                        {{this.leftside}}
+                                        <br>
+                                        <span>{{this.suace}}</span>
+                                        <span>: {{this.regular}}</span>
+        
+                                    </li>
+                                    <li *ngIf="this.leftsidepizzaCheese ==true">
+                                        <br>
+                                        <span>{{this.Cheese}}</span>
+                                        <span>: {{this.regularCheese}}</span>
+        
+                                    </li> -->
+                                    <!-- <li>Size: <span>Large</span></li>
+                                    <li>Crust Style: <span>Original</span></li>
+                                    <li>Size: <span>Large</span></li>
+                                    <li>Crust Style: <span>Original</span></li>
+                                    <li>Size: <span>Large</span></li> -->
+                                </ul>
+        
+                                <div class="order-summary-quantity">
+                                <div class="add-quantity">
+                                    <button type="" (click)="minus()"><fa-icon class="cart" [icon]="faMinusCircle"></fa-icon></button>
+                                    <input type="text" [value]="quantity">
+                                    <button type="" (click)="plus()"><fa-icon class="cart" [icon]="faPlusCircle"></fa-icon></button>
+                                
+                                </div>
+                                </div>
+        
+                                <!-- <div class="order-summary-button">
+                                    <button class="pizza-deal-cutomizeBtn">Cancel</button>
+                                    <button class="pizza-deal-orderBtn">Add To Cart</button>
+                                </div> -->
+                            </div>
+                            <div class="order-summary-footer">
+        
+                                <div class="order-summary-button">
+                                    <button class="pizza-deal-cutomizeBtn">Cancel</button>
+                                    <button class="pizza-deal-orderBtn">Add To Cart</button>
+                                </div>
+                            </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+         </div>
+
+
+
+         <!-- /////////////////////////////////Pizza name & add cutomization///////////////////////////////////////// -->
+         <div class="customize-right-div">
+            <div class="selectd-pizza-name">
+                <h1>SOPRANO</h1>
+                <p>Sopressata, Sun Dried Tomatoes, Gorgonzola Cheese, Mozzarella Cheese and Pizzaiolo Tomato Sauce</p>
+            </div>
+<div class="scrollToFixed"
+[ngClass]="{ scrollToFixedActive: OrderSummaryFixed == true }"
+>
+                    <div class="order-summary">
+                        <div class="order-summary-header">
+                            <p>ORDER SUMMARY</p>
+                            <span>$22.36</span>
+                        </div>
+                        <div class="order-summary-body">
+                        <h5>SOPRANO</h5>
+                        <ul>
+                            <li>Size: <span>Large</span></li>
+                            <li>Crust Style: <span>Original</span></li>
+                            <!-- <li >
+                                left side
+                                <ul class="inner-orderSummary-ul">
+                                    <li *ngFor="let items of leftside;let i=index">
+                                        <span *ngIf="items != null || items != '' || items != undefined ">- {{selectedSuace[i]}}</span>
+                                        <span  *ngIf="items != null || items != '' || items != undefined ">: {{items}}</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li >
+                                Whole Pizza
+                                <ul class="inner-orderSummary-ul">
+                                    <li *ngFor="let items of WholePizza;let i=index">
+                                        <span *ngIf="items != null || items != '' || items != undefined ">- {{selectedSuace[i]}}</span>
+                                        <span *ngIf="items != null || items != '' || items != undefined ">: {{items}}</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li >
+                                Right Side
+                                <ul class="inner-orderSummary-ul">
+                                    <li *ngFor="let items of RightPizza;let i=index">
+                                        <span *ngIf="items != null || items != '' || items != undefined ">- {{selectedSuace[i]}}</span>
+                                        <span *ngIf="items != null || items != '' || items != undefined ">: {{items}}</span>
+                                    </li>
+                                </ul>
+                            </li> -->
+                            <li>
+                                Left Side
+                                <ul  class="inner-orderSummary-ul">
+                                    <li *ngFor="let items of leftSideSelectedCheese">
+                                        <span>- {{items.description}}</span>
+                                        <span>: {{items.size}}</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Whole Pizza
+                                <ul class="inner-orderSummary-ul">
+                                    <li *ngFor="let items of wholeSelectedCheese">
+                                        <span>- {{items.description}}</span>
+                                        <span>: {{items.size}}</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Right Side
+                                <ul class="inner-orderSummary-ul">
+                                    <li *ngFor="let items of rightSideSelectedCheese">
+                                        <span>- {{items.description}}</span>
+                                        <span>: {{items.size}}</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- <li >
+                                Right Side
+                                <ul class="inner-orderSummary-ul">
+                                    <li *ngFor="let items of rightSideSelectedSuace">
+                                        <span>- {{items.description}}</span>
+                                        <span>: </span>
+                                    </li>
+                                </ul>
+                            </li> -->
+
+                            
+                            <!-- <li *ngIf="this.cheeseSide == true">
+                                {{this.leftsideCheese}}
+                                <ul class="inner-orderSummary-ul">
+                                    <li *ngIf="this.leftsidepizza ==false">
+                                        <span>- {{this.suace}}</span>
+                                        <span>: {{this.regular}}</span>
+                                    </li>
+                                    <li *ngIf="this.leftsidepizzaCheese == false">
+                                        <span>- {{this.Cheese}}</span>
+                                        <span>: {{this.regularCheese}}</span>
+                                    </li>
+                                </ul>
+                            </li> -->
+
+                            <!-- <li *ngIf="this.leftsidepizza ==true">
+                                {{this.leftside}}
+                                <br>
+                                <span>{{this.suace}}</span>
+                                <span>: {{this.regular}}</span>
+
+                            </li>
+                            <li *ngIf="this.leftsidepizzaCheese ==true">
+                                <br>
+                                <span>{{this.Cheese}}</span>
+                                <span>: {{this.regularCheese}}</span>
+
+                            </li> -->
+                            <!-- <li>Size: <span>Large</span></li>
+                            <li>Crust Style: <span>Original</span></li>
+                            <li>Size: <span>Large</span></li>
+                            <li>Crust Style: <span>Original</span></li>
+                            <li>Size: <span>Large</span></li> -->
+                        </ul>
+
+                        <div class="order-summary-quantity">
+                        <div class="add-quantity">
+                            <button type="" (click)="minus()"><fa-icon class="cart" [icon]="faMinusCircle"></fa-icon></button>
+                            <input type="text" [value]="quantity">
+                            <button type="" (click)="plus()"><fa-icon class="cart" [icon]="faPlusCircle"></fa-icon></button>
+                        
+                        </div>
+                        </div>
+
+                        <!-- <div class="order-summary-button">
+                            <button class="pizza-deal-cutomizeBtn">Cancel</button>
+                            <button class="pizza-deal-orderBtn">Add To Cart</button>
+                        </div> -->
+                    </div>
+                    <div class="order-summary-footer">
+
+                        <div class="order-summary-button">
+                            <button class="pizza-deal-cutomizeBtn">Cancel</button>
+                            <button class="pizza-deal-orderBtn">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+</div>
+         </div>
+</div>

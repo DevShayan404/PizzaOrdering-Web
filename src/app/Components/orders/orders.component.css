@@ -1,0 +1,332 @@
+.container{
+    margin-top: 45px;
+}
+.orders-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.orders-header h1{
+    font-family: "lance";
+    color: var(--brown);
+    text-align: center;
+    width: max-content;
+    margin: 0px 0px 0px 30px;
+}
+.card{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.30);
+    border-radius: .4rem;
+    overflow: hidden;
+}
+.card-header{
+    margin: 0;
+    padding: 0;
+}
+.card-header img{
+ width: 100%;
+
+}
+
+.card-body{
+    padding: 0;
+    margin: 8px;
+    /* position: relative; */
+}
+.deal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    
+}
+.pizza-name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.pizza-name h5{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--brown);
+    margin: 0;
+    padding: 0;
+    
+}
+.pizza-name p{
+    font-size: .6rem;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+    padding: 0;
+    /* display: none; */
+    
+}
+.add-pizza-quantity{
+display: flex;
+width: 60%;
+padding: 0;
+margin: 0;
+display: none;
+}
+.add-pizza-quantity button{
+    border: none;
+    background-color:transparent;
+}
+.add-pizza-quantity button fa-icon{
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+    color: var(--green);
+}
+.add-pizza-quantity input{
+    width: 20%;
+    padding: 0px 0px 0px 5px;
+    font-weight: 600;
+    font-size: .8rem;
+    outline: none;
+    border: none;
+
+}
+
+.deal-body{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.deal-pizza-spec p{
+    border: 1px solid var(--brown);
+    border-radius: .3rem;
+    background-color: var(--brown);
+    font-size: .6rem;
+    font-weight: 400;
+    color: #fff;
+    padding: 3px;
+    text-align: center;
+    margin: 10px 0px;
+    display: none;
+}
+.deal-pizza-sizes{
+    width: 100%;
+}
+.deal-pizza-sizes ul{
+    list-style: none;
+    /* margin: 35px 0px 0px 0px; */
+    padding: 0;
+    margin: 8px 0px;
+}
+.deal-pizza-sizes ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 3px 0px;
+    position: relative;
+   
+}
+.deal-pizza-sizes-left{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.deal-pizza-sizes-left input{
+ accent-color: var(--brown);
+}
+.deal-pizza-sizes-left label{
+    font-size: .8rem;
+    color: rgb(115, 115, 115);
+}
+.deal-pizza-sizes-right{
+}
+.deal-pizza-sizes-right p{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: .8rem;
+    color: rgb(115, 115, 115);
+}
+
+.card-footer {
+    padding: 0;
+    background-color: transparent;
+    border-top: none;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 5px;
+    padding: 0px 8px;
+}
+.card-footer .pizza-deal-cutomizeBtn{
+    border: 1px solid var(--brown);
+    border-radius: .3rem;
+    background-color: #fff;
+    color: var(--brown);
+    font-size: .5rem;
+    font-weight: 600;
+    padding: 3px 5px;
+    transition: .4s linear;
+}
+.card-footer .pizza-deal-cutomizeBtn:hover{
+    background-color: var(--brown);
+    color:#fff;
+}
+.card-footer .pizza-deal-orderBtn{
+    border: 1px solid var(--brown);
+    border-radius: .3rem;
+    background-color: var(--brown);
+    color: var(--yellow);
+    font-size: .5rem;
+    font-weight: 600;
+    padding: 3px 5px;
+    transition: .4s linear;
+}
+.card-footer .pizza-deal-orderBtn:hover{
+    background-color:var(--yellow);
+    color: var(--brown);
+}
+
+@media (min-width: 767px) {
+    .container{
+        margin-top: 45px;
+    }
+    .orders-header h1{
+        margin: 0;
+    }
+    .card-body{
+        margin: 10px;
+        position: relative;
+    }
+    .pizza-name{
+        width: 70%;
+    }
+    .pizza-name h5{
+        font-size: 1.1rem;
+    }
+    .pizza-name p{
+        font-size: .7rem;
+        
+    }
+    .deal-pizza-sizes ul{
+        margin: 0;
+    }
+    .add-pizza-quantity{
+        position: absolute;
+        width: 40%;
+        top: 0;
+        right: -20px;
+        display: inherit;
+    }
+    .add-pizza-quantity input{
+        font-size: .9rem;
+        padding: 0px 0px 0px 5px;
+    
+    }
+    .add-pizza-quantity button fa-icon{
+        font-size: 1.5rem;
+    }
+    .deal-pizza-spec p{
+        /* display: inherit; */
+        
+    }
+    .deal-pizza-sizes ul li{
+        margin: 3px 0px;
+       
+    }
+    .deal-pizza-sizes-left label{
+        font-size: .8rem;
+    }
+    .deal-pizza-sizes-right p{
+        font-size: .8rem;
+    }
+    .card-footer {
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding: 0;
+    }
+    .card-footer .pizza-deal-cutomizeBtn{
+        border: 2px solid var(--brown);
+        font-size: .7rem;
+    }
+    .card-footer .pizza-deal-orderBtn{
+        font-size: .7rem;
+        border: 2px solid var(--brown);
+    }
+
+}
+@media (min-width: 1025px) {
+    .container{
+        margin-top: 65px;
+    }
+    .orders-header h1{
+        margin: 0;
+    }
+    .card-body{
+        margin: 10px;
+        position: relative;
+    }
+    .pizza-name{
+        width: 70%;
+    }
+    .pizza-name h5{
+        font-size: 1.3rem;
+    }
+    .pizza-name p{
+        font-size: .9rem;
+        
+    }
+    .deal-pizza-sizes ul{
+        margin: 0;
+    }
+    .add-pizza-quantity{
+        position: absolute;
+        width: 40%;
+        top: 0;
+        right: 0;
+        transform: translate(40%, 0%);
+        display: inherit;
+    }
+    .add-pizza-quantity input{
+        font-size: 1rem;
+        padding: 0px 0px 0px 5px;
+    
+    }
+    .add-pizza-quantity button fa-icon{
+        font-size: 1.8rem;
+    }
+    .deal-pizza-spec p{
+        /* display: inherit; */
+        font-size: .7rem;
+    }
+    .deal-pizza-sizes ul li{
+        margin: 8px 10px;
+       
+    }
+    .deal-pizza-sizes-left label{
+        font-size: 1rem;
+    }
+    .deal-pizza-sizes-right p{
+        font-size: 1rem;
+    }
+    .card-footer {
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding: 0;
+    }
+    .card-footer .pizza-deal-cutomizeBtn{
+        font-size: 1rem;
+        border: 2px solid var(--brown);
+    }
+    .card-footer .pizza-deal-orderBtn{
+        font-size: 1rem;
+        border: 2px solid var(--brown);
+    }
+}

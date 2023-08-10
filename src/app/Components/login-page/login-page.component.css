@@ -1,0 +1,401 @@
+.login-bg-img{
+    background-image:
+    linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+      rgba(0, 0, 0, 0.3)
+    ),
+     url('../../../assets/Images/pexels-narda-yescas-1566837.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 110vh;
+    -webkit-filter: blur(2px); 
+    filter: blur(2px);
+}
+.login-main{
+    width: 100%;
+    /* height: max-content; */
+    height: 100vh;
+    /* margin-top: 65px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.login-wrapper{
+    /* z-index: 999; */
+    /* border: 1px solid var(--lightgray); */
+    width: 80%;
+    height: max-content;
+    border-radius: .3rem;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+.login-left{
+    flex-basis: 40%;
+    background-color: var(--brown);
+    display: none;
+}
+.login-logo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px; */
+    
+}
+.login-logo img{
+    width: 100%;
+}
+
+
+.login-right{
+    flex-basis: 100%;
+    background-color: #fff;
+    padding: 20px 0px;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    /* margin-top: 15px; */
+}
+.nav-link {
+    color: var(--brown);
+    font-family: "lance";
+    font-size: .9rem;
+}
+
+.login-right form{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin: 15px 0px; */
+    padding: 25px 15px;
+}
+.login-right form button{
+    border: 2px solid var(--brown);
+    border-radius: .3rem;
+    width: 100%;
+    font-size: .8rem;
+    font-weight: 600;
+    padding: 5px 15px;
+    transition: .4s linear;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--brown);
+    color:#fff;
+    font-family: "lance";
+}
+.login-right form button:hover{
+    background-color: #fff;
+    color: var(--brown);
+}
+.forgetPass{
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+.forgetPass a{
+    font-size: .7rem;
+    color: var(--orange);
+    cursor: pointer;
+    transition: .3s all;
+}
+.forgetPass a:hover{
+    text-decoration: underline;
+}
+.forgetPass p{
+    font-size: .6rem;
+    font-weight: 500;
+}
+.forgetPass span{
+    color: var(--orange);
+    transition: .3s all;
+    cursor: pointer;
+}
+.forgetPass span:hover{
+    text-decoration: underline;
+}
+.rememberMe{
+    font-size: .7rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--orange);
+    accent-color: var(--orange) ;
+}
+
+.input-field {
+    position: relative;
+      width: 100%;
+      height: 40px;
+      margin-bottom: 15px;
+      border: 1px solid  rgb(204, 204, 204);
+      border-radius: 0.3rem;
+  }
+  .input-field .form__input {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+      height: 100%;
+      border: none;
+      /* border: 1px solid  rgb(204, 204, 204); */
+      /* border-radius: 0.3rem; */
+      font-family: inherit;
+      font-size: inherit;
+      color: black;
+      outline: none;
+      padding: 0 1rem;
+      background: none;
+    z-index: 1;
+  }
+  .input-field .form__input__invalid {
+    border: 1px solid  red;
+}
+  .input-field .form__label{
+    position: absolute;
+    left: .5rem;
+    top: .5rem;
+    padding: 0 0.4rem;
+    color: rgb(142, 142, 142);
+    cursor: text;
+    transition: top 200ms ease-in
+    left 200ms ease-in
+    font-size 200ms ease-in;
+    background-color:white;
+    transition: 0.3s;
+  }
+  .form__input:focus + .form__label{
+    top: -.5rem;
+    left: .5rem;
+    color: var(--brown);
+    font-size: .7rem;
+    font-weight: 500;
+    z-index: 10;
+  }
+  .form__input:not(:placeholder-shown).form__input:not(:focus)+ .form__label{
+    top: -.5rem;
+    left: .5rem;
+    font-size: .7rem;
+    font-weight: 500;
+    z-index:10;
+  }
+  .input-field .form__input:focus{
+    border-color: var(--brown);
+  }
+  .activeBorder{
+    border:1px solid #ED0A3F ;
+    box-shadow: 0px 0px 8px rgba(237, 10, 63, 0.3);
+  }
+  .input-field span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate( -80%, 35%);
+    color: #ED0A3F;
+  }
+
+  .login-tooltip{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate( 10%, 100%);
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #fff;
+    z-index: 999;
+    padding: 5px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+  }
+  .login-tooltip-arrow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate( 50%, -95%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.22); */
+  }
+  .login-tooltip fa-icon{
+    color: #F7B500;
+    font-size: 1.2rem;
+  }
+  .login-tooltip-spec p{
+    margin: 0;
+    padding: 0;
+    font-size: .7rem;
+    font-weight: 500;
+  }
+  .toast{
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 230px;
+  }
+  .toast-body p{
+    margin: 0;
+    padding: 0;
+    font-size: .7rem;
+  }
+  .progress{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .progress::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ed0a3f;
+    animation: progress 3s linear forwards;
+  }
+  @keyframes progress{
+    100%{
+        right: 100%;
+    }
+}
+.success{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .success::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #59cd59;
+    animation: progress 2s linear forwards;
+  }
+  @keyframes progress{
+    100%{
+        right: 100%;
+    }
+}
+  
+  @media (min-width: 767px) {
+    .login-main{
+        height: 70vh;
+    
+    }
+    .login-wrapper{
+        width: 80%;
+    }
+    .login-left{
+        display: inherit;
+    }
+    .login-logo{
+        padding: 0;
+        
+    }
+    .login-right{
+        flex-basis: 60%;
+        padding: 30px 0px;
+    }
+    .nav-link {
+        font-size: 1rem;
+    }
+    .login-right form{
+        padding: 25px ;
+    }
+    .login-right form button{
+        font-size: .9rem;
+    }
+    .forgetPass a{
+        font-size: .8rem;
+    }
+    .forgetPass p{
+        font-size: .7rem;
+        font-weight: 600;
+    }
+    .rememberMe{
+        font-size: .8rem;
+    }
+    .toast{
+        width: 280px;
+      }
+      .toast-body p{
+        font-size: .8rem;
+      }
+
+  }
+  @media (min-width: 1025px) {
+    .login-main{
+        height: 100vh;
+        margin-top: 40px;
+    
+    }
+    .login-wrapper{
+        width: 65%;
+    }
+    .login-left{
+        display: inherit;
+    }
+    .login-logo{
+        padding: 0;
+        
+    }
+    .login-right{
+        flex-basis: 60%;
+        padding: 30px 0px;
+    }
+    .nav-link {
+        font-size: 1rem;
+    }
+    .login-right form{
+        padding: 25px ;
+    }
+    .login-right form button{
+        font-size: .9rem;
+    }
+    .forgetPass a{
+        font-size: .8rem;
+    }
+    .forgetPass p{
+        font-size: .7rem;
+        font-weight: 600;
+    }
+    .rememberMe{
+        font-size: .8rem;
+    }
+    .toast{
+        top: 80px;
+        width: 320px;
+      }
+      .toast-body p{
+        font-size: .9rem;
+      }
+  }

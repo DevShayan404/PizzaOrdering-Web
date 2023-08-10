@@ -1,0 +1,122 @@
+
+
+.rating-sec{
+    /* border: 1px solid red; */
+    width: 100%;
+    margin-top: 20px;
+}
+.rating-sec ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rating-sec ul li{
+    font-size: 2rem;
+    color: #FDCC0D;
+}
+.footer-spec{
+    /* border: 1px solid blue; */
+    margin-top: 30px;
+}
+.footer-spec ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    align-items: flex-start;
+    gap: 10px;
+    /* border: 1px solid red; */
+    height: 25vh;
+}
+.footer-spec ul li{
+    /* flex-basis: auto; */
+    color: #fff;
+    font-size: .8rem;
+    transition: .3s linear;
+    cursor: pointer;
+
+}
+.footer-spec ul li:hover{
+    text-decoration: underline;
+    color: var(--orange);
+}
+.footer-logo{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px;
+}
+.footer-logo img{
+    width: 80%;
+    height: 150px;
+    /* border: 1px solid red; */
+}
+.designBy{
+    /* border: 1px solid red; */
+    text-align: center;
+    color: gray;
+    font-size: .7rem;
+}
+.designBy span{
+    color: var(--orange);
+}
+
+@media (min-width: 767px) {
+    .rating-sec ul li{
+        font-size: 2.5rem;
+    }
+    .footer-spec ul{
+        gap: 15px;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        height: max-content;
+    
+    }
+    .footer-spec ul li{
+        font-size: 1rem;
+        flex-basis: auto;
+    }
+    .footer-logo img{
+        width: 60%;
+        height: 100%;
+        /* border: 1px solid red; */
+    }
+    .designBy{
+        font-size: .8rem;
+    }
+
+
+  }
+  @media (min-width: 1025px) {
+    .rating-sec ul li{
+        font-size: 2.5rem;
+    }
+    .footer-spec ul{
+        gap: 20px;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        height: max-content;
+    
+    }
+    .footer-spec ul li{
+        font-size: 1rem;
+        flex-basis: auto;
+    }
+    .footer-logo img{
+        width: 50%;
+        height: 100%;
+        /* border: 1px solid red; */
+    }
+    .designBy{
+        font-size: .8rem;
+    }
+
+  }

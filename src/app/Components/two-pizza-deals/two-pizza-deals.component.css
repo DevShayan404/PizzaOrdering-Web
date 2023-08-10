@@ -1,0 +1,679 @@
+/* *{
+    margin-top: 67px;
+} */
+.cutomize-pizza-main{
+    /* border: 1px solid red; */
+    /* height: 100vh; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 65px;
+    /* background-color: var(--brown); */
+}
+/* <!-- /////////////////////////////////left div///////////////////////////////////////// --> */
+.customize-left-div{
+    /* flex-basis: 75%; */
+    width: 75%;
+    height: max-content;
+    background-color: #fff;
+    /* border: 1px solid blue; */
+    /* display: flex; */
+}
+/* <!-- /////////////////////////////////image///////////////////////////////////////// --> */
+.pizza-img{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* border: 3px solid yellow; */
+    width: 100%;
+}
+.pizza-img img{
+    width: 100%;
+    height: 40vh;
+}
+/* <!-- /////////////////////////////////select items main///////////////////////////////////////// --> */
+.select-item-main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* height: 10vh; */
+    height: max-content;
+    /* border: 1px solid black; */
+}
+/* <!-- /////////////////////////////////Two Pizza Cards///////////////////////////////////////// --> */
+.twoPizza-items-header{
+   margin-top: 10px;
+    width: max-content; 
+    
+}
+.twoPizza-items-card{
+    /* border: 1px solid var(--lightgray);  */
+    margin: 25px 0px;
+    border-radius: .3rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.twoPizza_card-img{
+    /* border: 1px solid var(--lightgray); */
+    width: 100%;
+    border-radius: .3rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+
+}
+.twoPizza_card-img img{
+    width: 100%;
+    height: 100px;
+}
+.twoPizza-card-spec{
+    width: 100%;
+}
+.twoPizza-card-spec h5{
+    font-family: "lance";
+}
+.twoPizza-card-spec p{
+    font-size: .9rem;
+    padding: 0;
+    margin: 0;
+}
+.twoPizza-card-button{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.twoPizza-card-button button{
+    border: 2px solid var(--brown);
+    border-radius: .3rem;
+   
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 5px 15px;
+    transition: .4s linear;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--brown);
+    color:#fff;
+}
+.twoPizza-card-button button:hover{
+    background-color: #fff;
+    color: var(--brown);
+}
+
+/* .select-items-header{
+    border: 1px solid var(--lightgray); 
+    width: 75%; 
+    margin: 20px 0px;
+    border-radius: .3rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+} */
+
+/* <!-- /////////////////////////////////right div///////////////////////////////////////// --> */
+.customize-right-div{
+    width: 25%;
+    /* flex-basis: 25%; */
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid blue; */
+    background-color: var(--brown);
+   
+}
+.selectd-pizza-name{
+    /* border: 1px solid red; */
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid var(--yellow);
+    position: relative;
+}
+.selectd-pizza-name h1{
+    font-weight: 500;
+    font-family: "lance";
+    font-size: 2.2rem;
+    width: 80%;
+    text-align: center;
+    color: var(--yellow);
+    letter-spacing: 2px;
+
+}
+.selectd-pizza-name p{
+    /* border: 1px solid black; */
+    width: 90%;
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 500;
+    color: white;
+
+}
+
+.scrollToFixed{
+    /* position: absolute; */
+    /* top: 330px; */
+    /* transition: .3s linear; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* .scrollToFixedActive{
+    position: fixed;
+    top: 68px;
+} */
+.order-summary{
+    border: none;
+    border-radius: .3rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 30px 0px;
+    /* padding: 15px 0px; */
+    
+}
+.order-summary-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 2px solid var(--brown);
+    padding: 8px;
+    background-color: var(--yellow);
+    color: var(--brown);
+}
+.order-summary-header p{
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+.order-summary-header span{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+.order-summary-body{
+    border: 1px solid #fff;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 15px 8px;
+
+}
+
+.order-summary-body h5{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--brown);
+}
+.order-summary-body ul{
+    border: 1px solid var(--lightgray);
+    border-radius: .3rem;
+    min-height: max-content;
+    max-height: 200px;
+    overflow-y: scroll;
+    background-color: #fff;
+    margin-bottom: 8px;
+    padding: 10px 10px;
+    list-style: none;
+    
+}
+.order-summary-body ul li{
+    font-size: .9rem;
+    font-weight: 600;
+    /* margin: 0 0 5px 0; */
+}
+.order-summary-body ul li span{
+    font-weight: 500;
+
+}
+.order-summary-body .inner-orderSummary-ul{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.order-summary-body ul::-webkit-scrollbar {
+    width: 8px;
+    
+  }
+  .order-summary-body ul::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+  .order-summary-body ul::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 3rem;
+  }
+
+.order-summary-button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    /* border: 1px solid red; */
+}
+.order-summary-button .pizza-deal-orderBtn{
+    border: 2px solid var(--brown);
+    border-radius: .3rem;
+    background-color: var(--brown);
+    color: var(--yellow);
+    font-size: .9rem;
+    font-weight: 500;
+    padding: 5px 0px;
+    width: 100%;
+    font-family: "lance";
+    transition: .4s linear;
+}
+.order-summary-button .pizza-deal-orderBtn:hover{
+    background-color:var(--yellow);
+    color: var(--brown);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------ */
+.modal-body {
+    padding: 0;
+}
+.modal-header {
+    padding: .4rem 1rem;
+    background-color: var(--brown);
+}
+.modal-header h5{
+    color: var(--yellow);
+    font-family: "lance";
+    width: 100%;
+    text-align: center;
+}
+.header-close {
+    color: #fff;
+}
+
+.modal-main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+.modal-main-left{
+    flex-basis: 70%;
+    min-height: max-content;
+    max-height: 90vh;
+    overflow-y: scroll;
+    padding: 15px 0px;
+    /* border: 2px solid red; */
+
+}
+.modal-main-right{
+    flex-basis: 30%;
+
+}
+.main-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.select-items-header{
+    /* border: 1px solid var(--lightgray);  */
+    width: 90%; 
+    margin: 15px 0px;
+    border-radius: .3rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+/* <!-- /////////////////////////////////size & crust///////////////////////////////////////// --> */
+.size-header h1{
+    /* border: 2px solid red; */
+    /* width:100% ; */
+    /* text-align: center; */
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 10px ;
+    /* border-radius: .3rem; */
+    background-color: var(--brown);
+    color: #fff;
+
+}
+.size-select{
+    margin: 10px 5px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: flex-start;
+}
+.size-select h5{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0px 0px 0px 5px;
+    padding: 0;
+    /* color: var(--brown); */
+    
+}
+.size-select ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.size-select ul li{
+    border: 1px solid var(--lightgray);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 8px 0px;
+    border-radius: .3rem;
+
+}
+.size-select ul li label{
+    font-size: .8rem;
+    font-weight: 600;
+}
+.size-select ul li input{
+    accent-color: var(--brown);
+    cursor: pointer;
+}
+.crust-select{
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--orange);
+    /* margin: 0 0 10px 0; */
+    padding: 0;
+}
+
+/* <!-- /////////////////////////////////sauce & cheese///////////////////////////////////////// --> */
+
+/* <!-- ///////sauce/////////--> */
+.sauce-select-main{
+    /* position: relative; */
+    margin: 10px 5px;
+    /* border: 1px solid red; */
+    /* display: flex;
+    justify-content: flex-start; */
+
+}
+.sauce-select-main h5{
+    font-size: 1.5rem;
+    font-weight: 600;
+    /* margin: 0px 0px 0px 5px; */
+    padding: 0;
+}
+.sauce-select-main ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    
+}
+.sauce-select-main ul li{
+    border: 1px solid var(--lightgray);
+    /* display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 8px 0px;
+    border-radius: .3rem; */
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0px;
+    border-radius: .3rem; 
+    padding: 10px;
+    cursor: pointer;
+    /* background-color: #f5f5f5; */
+}
+.activeCustomizeDiv{
+    background-color: #f5f5f5;
+}
+.customize-spec{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+.customize-spec label{
+    font-size: .8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.customize-spec input{
+    accent-color: var(--brown);
+    cursor: pointer;
+}
+
+.customize-slice{
+    border-top:2px dotted black;
+    border-bottom:2px dotted black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px 0px;
+    padding: 10px 0px;
+    /* display: none; */
+}
+.customize-slice-img{
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* color: green; */
+    cursor: pointer;
+    
+
+}
+.customize-slice-img img{
+    width: 50px;
+    height: 50px;
+    border-radius: .3rem;
+    overflow: hidden;
+    transition: .2s all;
+    border: 1px solid var(--lightgray);
+}
+.customize-slice-img img:hover{
+    background-color: var(--brown);
+}
+.customizeSliceImg{
+    background-color: var(--brown);
+}
+.customize-slice-button{
+    width: 100%;
+    /* border: 1px solid red; */
+    /* width: 50%; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0px 0px 0px;
+}
+.customizeSliceButton{
+    flex-basis: 46%;
+    font-size: .8rem;
+    font-weight: 600;
+    border-radius: .3rem;
+    padding: 5px 0px;
+    border: 1px solid var(--lightgray);
+    background-color: transparent;
+    transition: .2s all;
+}
+.customizeSliceButton:hover{
+    background-color: var(--brown);
+    color: var(--yellow);
+
+}
+.customizeSliceButtonActive{
+    background-color: var(--brown);
+    color: var(--yellow);
+    
+}
+.meat-select-main{
+    margin: 10px 5px;
+}
+/* <!-- /////////////////////////////////TOPPING //////////////////////////////////////// --> */
+.meat-select-main h5{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0;
+}
+.meat-select-main ul{
+    display: flex;
+    /* border: 2px solid blue; */
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+}
+.meat-select-main ul li{
+    /* border: 4px solid red; */
+    width: 48%;
+    border: 1px solid var(--lightgray);
+    margin: 8px 0px;
+    border-radius: .3rem; 
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+.modal-scrollToFixed{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.modal-order-summary{
+    border: none;
+    border-radius: .3rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 30px 0px;
+    /* border: 1px solid var(--brown); */
+    
+}
+.modal-order-summary-img{
+    width: 100%;
+}
+.modal-order-summary-img img{
+    width: 100%;
+    height: 160px;
+}
+.modal-order-summary-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 2px solid var(--brown);
+    border-left: 1px solid var(--brown);
+    border-right:1px solid var(--brown) ;
+    padding: 8px;
+    background-color: var(--yellow);
+    color: var(--brown);
+}
+.modal-order-summary-header p{
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+.modal-order-summary-header span{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+.modal-order-summary-body{
+    border: 1px solid #fff;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 15px 8px;
+    border-bottom: 1px solid var(--brown);
+    border-left: 1px solid var(--brown);
+    border-right:1px solid var(--brown) ;
+    border-bottom-left-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+}
+
+.modal-order-summary-body h5{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--brown);
+}
+.modal-order-summary-body ul{
+    border: 1px solid var(--lightgray);
+    border-radius: .3rem;
+    min-height: max-content;
+    max-height: 200px;
+    overflow-y: scroll;
+    background-color: #fff;
+    margin-bottom: 8px;
+    padding: 10px 10px;
+    list-style: none;
+}
+.modal-order-summary-body ul li{
+    font-size: .9rem;
+    font-weight: 600;
+    /* margin: 0 0 5px 0; */
+}
+.modal-order-summary-body ul li span{
+    font-weight: 500;
+
+}
+.modal-order-summary-body .inner-orderSummary-ul{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.modal-order-summary-body ul::-webkit-scrollbar {
+    width: 8px;
+    
+  }
+  .modal-order-summary-body ul::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+  .modal-order-summary-body ul::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 3rem;
+  }
+.modal-order-summary-button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+.modal-order-summary-button .pizza-deal-orderBtn{
+    border: 2px solid var(--brown);
+    border-radius: .3rem;
+    background-color: var(--brown);
+    color: var(--yellow);
+    font-size: .9rem;
+    font-weight: 500;
+    font-family: "lance";
+    padding: 5px 0px;
+    transition: .4s linear;
+    width: 100%;
+}
+.modal-order-summary-button .pizza-deal-orderBtn:hover{
+    background-color:var(--yellow);
+    color: var(--brown);
+}

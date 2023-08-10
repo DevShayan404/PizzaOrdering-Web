@@ -1,0 +1,237 @@
+<div class="login-main">
+  <div class="login-bg-img"></div>
+  <div class="login-wrapper">
+    <!-- ---------------------------login-left-------------------------------------------- -->
+    <div class="login-left">
+      <div class="login-logo">
+        <img  src="assets\Images\footerLogo.png" alt="" />
+      </div>
+    </div>
+    <!-- ---------------------------login-right-------------------------------------------- -->
+    <div class="login-right">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="home-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#home"
+            type="button"
+            role="tab"
+            aria-controls="home"
+            aria-selected="true"
+          >
+            Login
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="profile-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#profile"
+            type="button"
+            role="tab"
+            aria-controls="profile"
+            aria-selected="false"
+          >
+            Register
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="home"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+        >
+          <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm(loginForm.value)">
+            <div
+              class="input-field"
+              [ngClass]="{'activeBorder': Email.errors?.['required'] && Email.touched }"
+            >
+              <input
+                id="email"
+                formControlName="email"
+                type="email"
+                placeholder=" "
+                class="form__input"
+                required
+              />
+              <label for="" class="form__label">E-mail</label>
+              <div
+                class="login-tooltip"
+                *ngIf="Email.errors?.['email'] && Email.touched"
+              >
+                <div class="login-tooltip-arrow"></div>
+                <fa-icon [icon]="faCircleExclamation"></fa-icon>
+                <div class="login-tooltip-spec">
+                  <p>Please enter a Part following '@'.</p>
+                  <p>'Stack @' is incomplete.</p>
+                </div>
+              </div>
+              <span *ngIf="Email.errors?.['required'] && Email.touched"
+                ><fa-icon [icon]="faCircleQuestion"></fa-icon
+              ></span>
+            </div>
+            <div
+              class="input-field"
+              [ngClass]="{'activeBorder': Password.errors?.['required'] && Password.touched }"
+            >
+              <input
+                id="password"
+                formControlName="password"
+                type="password"
+                placeholder=" "
+                class="form__input"
+                required
+              />
+              <label for="" class="form__label">Password</label>
+              <span *ngIf="Password.errors?.['required'] && Password.touched"
+                ><fa-icon class="cart" [icon]="faCircleQuestion"></fa-icon
+              ></span>
+            </div>
+            <div class="forgetPass">
+              <div class="rememberMe">
+                <input type="checkbox" />
+                <label for="">Remember Me</label>
+              </div>
+              <a>Forget Password?</a>
+            </div>
+            <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">LOGIN</button>
+          </form>
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="profile"
+          role="tabpanel"
+          aria-labelledby="profile-tab"
+        >
+          <form [formGroup]="registerForm" (ngSubmit)="submitRigisterForm(registerForm.value)">
+            <div 
+            [ngClass]="{'activeBorder': UserName.errors?.['required'] && UserName.touched }"
+            class="input-field">
+              <input formControlName="userName" type="text" placeholder=" " class="form__input" />
+              <label for="" class="form__label">User Name</label>
+              <span *ngIf="UserName.errors?.['required'] && UserName.touched"
+                ><fa-icon [icon]="faCircleQuestion"></fa-icon
+              ></span>
+            </div>
+            <div
+            [ngClass]="{'activeBorder': RgisterEmail.errors?.['required'] && RgisterEmail.touched }"
+             class="input-field">
+              <input formControlName="Email" type="email" placeholder=" " class="form__input" />
+              <label for="" class="form__label">E-mail</label>
+              <div
+                class="login-tooltip"
+                *ngIf="RgisterEmail.errors?.['email'] && RgisterEmail.touched"
+              >
+                <div class="login-tooltip-arrow"></div>
+                <fa-icon [icon]="faCircleExclamation"></fa-icon>
+                <div class="login-tooltip-spec">
+                  <p>Please enter a Part following '@'.</p>
+                  <p>'Stack @' is incomplete.</p>
+                </div>
+              </div>
+              <span *ngIf="RgisterEmail.errors?.['required'] && RgisterEmail.touched"
+                ><fa-icon [icon]="faCircleQuestion"></fa-icon
+              ></span>
+            </div>
+            <div
+            [ngClass]="{'activeBorder': RgisterPassword.errors?.['required'] && RgisterPassword.touched }"
+             class="input-field">
+              <input formControlName="Password" type="password" placeholder=" " class="form__input" />
+              <label for="" class="form__label">Password</label>
+              <span *ngIf="RgisterPassword.errors?.['required'] && RgisterPassword.touched"
+                ><fa-icon [icon]="faCircleQuestion"></fa-icon
+              ></span>
+            </div>
+            <div class="forgetPass">
+              <p>
+                Your personal data will be used to support your experience
+                throughout this website, to manage access to your account, and
+                for other purposes described in our <span>privacy policy.</span>
+              </p>
+            </div>
+            <button>REGISTER</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------Toaster------------------- -->
+    <div
+    *ngIf="toastwarning"
+      class="toast show align-items-center m-3  animate__animated animate__flipInX"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      style="border-radius: 0; border: none"
+    >
+      <div
+        class="d-flex"
+        style="
+          border-left: 5px solid #ed0a3f;"
+      >
+        <div class="toast-body d-flex align-items-center">
+          <fa-icon style="margin-right: 10px; color:#ed0a3f; font-size: 1.2rem;" [icon]="faCircleExclamation"></fa-icon>
+          <p>Please Fill Out the Fields.</p>
+        </div>
+        <button
+          type="button"
+          class="btn-close me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+          (click)="toastclose()"
+        ></button>
+      </div>
+      <div class="progress"></div>
+    </div>
+
+    <div
+      *ngIf="toastSuccess"
+      class="toast show align-items-center m-3  animate__animated animate__flipInX"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      style="border-radius: 0; border: none"
+    >
+      <div
+        class="d-flex"
+        style="
+          border-left: 5px solid #59cd59;"
+      >
+        <div class="toast-body d-flex align-items-center">
+          <fa-icon style="margin-right: 10px; color:#59cd59; font-size: 1.2rem;" [icon]="faCheckCircle"></fa-icon>
+          <p>Login Successfully.</p>
+        </div>
+      </div>
+      <div class="success"></div>
+    </div>
+
+    <div
+      *ngIf="toastRegister"
+      class="toast show align-items-center m-3  animate__animated animate__flipInX"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      style="border-radius: 0; border: none"
+    >
+      <div
+        class="d-flex"
+        style="
+          border-left: 5px solid #59cd59;"
+      >
+        <div class="toast-body d-flex align-items-center">
+          <fa-icon style="margin-right: 10px; color:#59cd59; font-size: 1.2rem;" [icon]="faCheckCircle"></fa-icon>
+          <p>Registered Successfully.</p>
+        </div>
+      </div>
+      <div class="success"></div>
+    </div>
+  <!-- ------------------Toaster------------------- -->
+    
+  </div>
+</div>
+

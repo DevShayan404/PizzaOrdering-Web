@@ -1,0 +1,234 @@
+.deal-container{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    background-image:
+    linear-gradient(
+        rgba(0, 0, 0, 0.01), 
+      rgba(0, 0, 0, 0.01)
+    ),
+     url('../../../assets/Images/deal_bgImg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 15px solid var(--yellow);
+    /* border-bottom: 15px solid var(--green); */
+}
+.pizzaCard-div{
+    /* margin-top: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 8px;
+    width: 90%;
+    /* border: 1px solid red;/ */
+    margin: 30px 0px;
+}
+.pizzaCard-div span{
+    /* border: 2px solid var(--brown); */
+    width: 40%;
+    height:100px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    /* border-radius: .3rem; */
+}
+.pizzaCard-div span img{
+    width: 100%;
+    height: 100%;
+    transition: all 1.3s ease-in-out;
+}
+.pizzaCard-div span:hover img{
+    transform: scale(1.3);
+}
+.pizzaCard-div span p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    font-weight: 800;
+    text-align: center;
+    color: white;
+    text-shadow: 5px 5px 10px #000000;
+}
+.deal-content{
+    margin: 10px 0px 10px 0px; 
+    /* border: 1px solid red; */
+    width:50%;
+    text-align: center
+}
+.deal-content h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--brown);
+    font-family: "lance";
+}
+.deal-content-addMore{
+    /* margin: 10px 0px; */
+    text-align: center;
+}
+.deal-content-addMore h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--brown);
+    font-family: "lance";
+}
+.deal-spec button{
+        border: 2px solid var(--brown);
+    color: var(--yellow);
+    background-color: var(--brown);
+    padding: 5px;
+    border-radius: .3rem;
+    font-size: .8rem;
+    font-weight: 600;
+    transition: .4s all;
+}
+.deal-spec button:hover{
+    background-color: var(--yellow);
+    color: var(--brown);
+}
+.checkout{
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px;
+}
+.checkout p{
+    font-size: .8rem;
+    font-weight: 600;
+
+}
+.checkout strong{
+    color: var(--orange);
+}
+@media (min-width: 767px) {
+    .deal-container{
+        /* border-top: 20px solid var(--yellow);
+        border-bottom: 20px solid var(--green); */
+        margin-top: 45px;
+    }
+
+    .pizzaCard-div{
+        gap: 0;
+        width: 90%;
+    }
+    .pizzaCard-div span{
+        width: 20%;
+        height:130px;
+    }
+    .pizzaCard-div span p{
+        font-size: 1.1rem;
+        font-weight: 800;
+    }
+    .deal-content{
+        width:50%;
+    }
+    .deal-content h1{
+        font-size: 2rem;
+        font-weight: 500;
+        color: var(--brown);
+    }
+    .deal-content-addMore{
+        width: 50%;
+
+    }
+    .deal-content-addMore h1{
+        font-size: 2rem;
+        font-weight: 500;
+        color: var(--brown);
+    }
+    .deal-image img{
+        width: 140px;
+        height: 140px;
+    }
+    .deal-image h1{
+        font-size: 1.6rem;
+        font-weight: 500;
+        width: 30%;
+    }
+    .deal-spec{
+        width: 80%;
+        font-size: 1rem;
+    }
+    .deal-spec button{
+    padding: 8px;
+    font-size: .9rem;
+    font-weight: 600;
+    }
+    .checkout p{
+        font-size: .9rem;
+
+    }
+}
+@media (min-width: 1023px) {
+    .deal-container{
+        /* border-top: 20px solid var(--yellow);
+        border-bottom: 20px solid var(--green); */
+        margin-top: 65px;
+    }
+    .pizzaCard-div{
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row wrap;
+        gap: 0;
+        width: 90%;
+    }
+    .pizzaCard-div span{
+        width: 20%;
+        height:150px;
+    }
+    .pizzaCard-div span p{
+        font-size: 1.3rem;
+        font-weight: 800;
+    }
+    .deal-content{
+        width:25%;
+    }
+    .deal-content h1{
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: var(--brown);
+    }
+    .deal-content-addMore{
+        width:50%;
+        /* border: 1px solid red; */
+    }
+    .deal-content-addMore h1{
+        font-size: 3rem;
+        font-weight: 500;
+        color: var(--brown);
+    }
+
+    .deal-image img{
+        width: 150px;
+        height: 150px;
+    }
+    .deal-image h1{
+        font-size: 2rem;
+        font-weight: 700;
+        width: 30%;
+    }
+    .deal-image h1{
+        width: 60%;
+    }
+    .deal-spec{
+        width: 60%;
+        font-size: 1rem;
+    }
+    .deal-spec button{
+    padding: 5px 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    }
+    .checkout p{
+        font-size: .9rem;
+
+    }
+}

@@ -1,0 +1,250 @@
+header{
+    position: fixed;
+    top: 0px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    transition: .3s all;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.22);
+    
+}
+.activeHeader{
+    height: 45px;
+}
+.logo{
+    position: relative;
+    cursor: pointer;
+}
+.logo .logoimg{
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    width: 90px;
+    height: 90px;
+    transition: .3s all;
+    /* border: 1px solid red; */
+}
+.logoImgActive{
+    position: absolute;
+    top: -25px;
+    left: 15px;
+    width: 70px;
+    height: 70px;
+    transition: .3s all;
+}
+.toggle{
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-wrap: wrap;
+}
+.toggle ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0px 10px;
+    /* border: 1px solid blue;  */
+    gap: 5px;
+    /* padding: 0px 10px; */
+}
+.toggle ul li{
+    font-size: 1rem;
+}
+.order-online{
+    border: 2px solid var(--brown);
+    background-color: var(--brown); 
+    color:  var(--yellow);
+    padding: 5px 8px;
+    border-radius: .4rem;
+    transition: .4s all;
+    cursor: pointer;
+}
+.order-online:hover{
+    background-color: var(--yellow);
+    color: var(--brown);
+    /* letter-spacing: 1px; */
+
+}
+.login{
+    border-left: 2px solid var(--brown);
+    /* border: 1px solid red; */
+    padding:0px 0px 0px 8px;
+    font-size: .8rem;
+    transition: .2s all;
+    width: 55px;
+    cursor: pointer;
+}
+.login:hover{
+    border-left: 6px solid var(--brown);
+}
+.toggle ul li fa-icon{
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding:5px ;
+    /* border: 1px solid red; */
+}
+/* .cart{
+    margin-right: 10px;
+    border: 1px solid red;
+} */
+.hamburger{
+    color: var(--brown);
+}
+
+
+
+.sidebar-main{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.8) ;
+}
+#sidebar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: var(--brown);
+    width: 240px;
+    height: 100%;
+    box-shadow: 2px 0 3px rgba(0, 0, 0, 0.1);
+    animation: slide .3s linear forwards;
+    
+  }
+  @keyframes slide {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+#sidebar img{
+    margin: 10px 0px;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    
+}
+#sidebar fa-icon{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 2rem;
+    color: var(--yellow);
+    cursor: pointer;
+}
+  #sidebar ul {
+    border-top: 3px solid var(--yellow);
+    list-style: none;
+    margin:  0;
+    padding: 0;
+  }
+#sidebar li {
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+#sidebar a {
+    display: block;
+    padding: .6rem;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s all;
+}
+#sidebar a:hover{
+    color: var(--brown); 
+    background-color: var(--yellow);
+}
+
+@media (min-width: 767px) {
+    header{
+        height: 60px;
+        /* height: 45px; */
+    }
+    .activeHeader{
+        height: 45px;
+    }
+    .logo .logoimg{
+        width: 100px;
+        height: 100px;
+        
+    }
+    .logoImgActive{
+        width: 80px;
+        height: 80px;
+    }
+    .order-online{
+        font-size: .7rem;
+        font-weight: 600;
+        padding: 5px;
+    }
+    .login{
+        padding:0px 0px 0px 10px;
+        font-size: .9rem;
+        width: 50px;
+    }
+    #sidebar {
+    width: 280px;
+    height: 100%;
+  }
+  #sidebar img{
+    margin: 10px 0px;
+    width: 100%;
+    height: 120px;
+ }
+ #sidebar a {
+    padding: 1rem;
+}
+  }
+
+@media (min-width: 1025px) {
+    header{
+        height: 80px;
+    }
+    .activeHeader{
+        height: 60px;
+    }
+    .logo .logoimg{
+        left: 40px;
+        width: 140px;
+        height: 140px;
+    }
+    .logoImgActive{
+        width: 100px;
+        height: 100px;
+    }
+
+    .order-online{
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 5px 8px;
+    }
+    .login{
+        padding:0px 0px 0px 10px;
+        font-size: 1.1rem;
+        width: 70px;
+    }
+    #sidebar {
+        width: 280px;
+        height: 100%;
+      }
+      #sidebar img{
+        margin: 10px 0px;
+        width: 100%;
+        height: 120px;
+     }
+     #sidebar a {
+        padding: 1rem;
+    }
+  }
+
+
+  
